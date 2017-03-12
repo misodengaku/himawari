@@ -1,0 +1,130 @@
+[
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 0,
+		"fields": {
+			"category_id": 0,
+			"name": "ニュース／報道"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 1,
+		"fields": {
+			"category_id": 1,
+			"name": "スポーツ"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 2,
+		"fields": {
+			"category_id": 2,
+			"name": "情報／ワイドショー"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 3,
+		"fields": {
+			"category_id": 3,
+			"name": "ドラマ"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 4,
+		"fields": {
+			"category_id": 4,
+			"name": "音楽"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 5,
+		"fields": {
+			"category_id": 5,
+			"name": "バラエティ"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 6,
+		"fields": {
+			"category_id": 6,
+			"name": "映画"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 7,
+		"fields": {
+			"category_id": 7,
+			"name": "アニメ／特撮"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 8,
+		"fields": {
+			"category_id": 8,
+			"name": "ドキュメンタリー／教養"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 9,
+		"fields": {
+			"category_id": 9,
+			"name": "劇場／公演"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 10,
+		"fields": {
+			"category_id": 10,
+			"name": "趣味／教育"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 11,
+		"fields": {
+			"category_id": 11,
+			"name": "福祉"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 12,
+		"fields": {
+			"category_id": 12,
+			"name": "予備"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 13,
+		"fields": {
+			"category_id": 13,
+			"name": "予備"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 14,
+		"fields": {
+			"category_id": 14,
+			"name": "拡張"
+		}
+	},
+	{
+		"model": "himawari.CategoryModel",
+		"pk": 15,
+		"fields": {
+			"category_id": 15,
+			"name": "その他"
+		}
+	}
+]

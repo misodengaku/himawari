@@ -11,8 +11,8 @@ class BroadcastStationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BroadcastStationModel
-        fields = ("station_id", "name", "service_id",
-                  "transport_stream_id", "original_network_id")
+        # fields = ('station_id',)
+        fields = '__all__'
 
     station_id = serializers.CharField()
     name = serializers.CharField()
@@ -20,42 +20,43 @@ class BroadcastStationSerializer(serializers.ModelSerializer):
     transport_stream_id = serializers.IntegerField()
     original_network_id = serializers.IntegerField()
 
-class CategoryField(serializers.PrimaryKeyRelatedField):
-    def to_representation(self, obj):
-        return CategoryModel.objects.filter(large_category=1, middle_category=1)
-        # return model_to_dict(obj)
-        # print(obj)
-        # if str(obj) == 'himawari.CategoryModel.None':
-        #     return [None,]
-        # print(core.serializers.serialize('json', obj))
-        # return core.serializers.serialize('json', obj)
 
-    def to_internal_value(self, data):
-        if data == 'ニュース／報道 - 天気':
-            print(CategoryModel.objects.filter(large_category=1, middle_category=1))
-            return CategoryModel.objects.filter(large_category=1, middle_category=1)
-        raise serializer.ValidationError('unknown category')
+class SubCategorySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = SubCategoryModel
+        fields = ('id', 'name')
+
+    name = serializers.SerializerMethodField()
+    # name = serializers.CharField()
+
+    def get_name(self, obj):
+        return obj.get_fullname()
 
 
 class ProgramSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ProgramModel
-        fields = ("event_id", "station", "title", "detail",
-                  "start_time", "end_time", "category")
+        fields = '__all__'
+        # ("event_id", "station", "title", "detail",
+        #           "start_time", "end_time", "categories")
 
     event_id = serializers.IntegerField()
+    # station = BroadcastStationSerializer(read_only=True)
     station = serializers.PrimaryKeyRelatedField(
-        queryset=BroadcastStationModel.objects.all(), source="station_id")
+        queryset=BroadcastStationModel.objects.all())
     title = serializers.CharField()
     detail = serializers.CharField()
     start_time = serializers.DateTimeField()
     end_time = serializers.DateTimeField()
-    category = serializers.ListField(
-        CategoryField(
-           queryset=SubCategoryModel.objects.all(), source="category__id"
-        )
-    )
-    # category = CategoryField()
+    categories = SubCategorySerializer(many=True, read_only=False)
 
-
+    def create(self, validated_data):
+        print(validated_data)
+        categories_data = validated_data.pop('categories')
+        program = ProgramModel.objects.create(**validated_data)
+        for category_data in categories_data:
+            print(category_data)
+            program.categories.create(**category_data)
+        return program

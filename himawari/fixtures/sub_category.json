@@ -1,0 +1,965 @@
+[
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 0,
+		"fields": {
+			"large_category": 0,
+			"category_id": 0,
+			"name": "定時・総合"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 1,
+		"fields": {
+			"large_category": 0,
+			"category_id": 1,
+			"name": "天気"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 2,
+		"fields": {
+			"large_category": 0,
+			"category_id": 2,
+			"name": "特集・ドキュメント"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 3,
+		"fields": {
+			"large_category": 0,
+			"category_id": 3,
+			"name": "政治・国会"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 4,
+		"fields": {
+			"large_category": 0,
+			"category_id": 4,
+			"name": "経済・市況"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 5,
+		"fields": {
+			"large_category": 0,
+			"category_id": 5,
+			"name": "海外・国際"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 6,
+		"fields": {
+			"large_category": 0,
+			"category_id": 6,
+			"name": "解説"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 7,
+		"fields": {
+			"large_category": 0,
+			"category_id": 7,
+			"name": "討論・会談"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 8,
+		"fields": {
+			"large_category": 0,
+			"category_id": 8,
+			"name": "報道特番"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 9,
+		"fields": {
+			"large_category": 0,
+			"category_id": 9,
+			"name": "ローカル・地域"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 10,
+		"fields": {
+			"large_category": 0,
+			"category_id": 10,
+			"name": "交通"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 11,
+		"fields": {
+			"large_category": 0,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 12,
+		"fields": {
+			"large_category": 1,
+			"category_id": 0,
+			"name": "スポーツニュース"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 13,
+		"fields": {
+			"large_category": 1,
+			"category_id": 1,
+			"name": "野球"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 14,
+		"fields": {
+			"large_category": 1,
+			"category_id": 2,
+			"name": "サッカー"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 15,
+		"fields": {
+			"large_category": 1,
+			"category_id": 3,
+			"name": "ゴルフ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 16,
+		"fields": {
+			"large_category": 1,
+			"category_id": 4,
+			"name": "その他の球技"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 17,
+		"fields": {
+			"large_category": 1,
+			"category_id": 5,
+			"name": "相撲・格闘技"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 18,
+		"fields": {
+			"large_category": 1,
+			"category_id": 6,
+			"name": "オリンピック・国際大会"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 19,
+		"fields": {
+			"large_category": 1,
+			"category_id": 7,
+			"name": "マラソン・陸上・水泳"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 20,
+		"fields": {
+			"large_category": 1,
+			"category_id": 8,
+			"name": "モータースポーツ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 21,
+		"fields": {
+			"large_category": 1,
+			"category_id": 9,
+			"name": "マリン・ウィンタースポーツ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 22,
+		"fields": {
+			"large_category": 1,
+			"category_id": 10,
+			"name": "競馬・公営競技"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 23,
+		"fields": {
+			"large_category": 1,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 24,
+		"fields": {
+			"large_category": 2,
+			"category_id": 0,
+			"name": "芸能・ワイドショー"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 25,
+		"fields": {
+			"large_category": 2,
+			"category_id": 1,
+			"name": "ファッション"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 26,
+		"fields": {
+			"large_category": 2,
+			"category_id": 2,
+			"name": "暮らし・住まい"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 27,
+		"fields": {
+			"large_category": 2,
+			"category_id": 3,
+			"name": "健康・医療"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 28,
+		"fields": {
+			"large_category": 2,
+			"category_id": 4,
+			"name": "ショッピング・通販"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 29,
+		"fields": {
+			"large_category": 2,
+			"category_id": 5,
+			"name": "グルメ・料理"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 30,
+		"fields": {
+			"large_category": 2,
+			"category_id": 6,
+			"name": "イベント"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 31,
+		"fields": {
+			"large_category": 2,
+			"category_id": 7,
+			"name": "番組紹介・お知らせ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 32,
+		"fields": {
+			"large_category": 2,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 33,
+		"fields": {
+			"large_category": 3,
+			"category_id": 0,
+			"name": "国内ドラマ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 34,
+		"fields": {
+			"large_category": 3,
+			"category_id": 1,
+			"name": "海外ドラマ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 35,
+		"fields": {
+			"large_category": 3,
+			"category_id": 2,
+			"name": "時代劇"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 36,
+		"fields": {
+			"large_category": 3,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 37,
+		"fields": {
+			"large_category": 4,
+			"category_id": 0,
+			"name": "国内ロック・ポップス"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 38,
+		"fields": {
+			"large_category": 4,
+			"category_id": 1,
+			"name": "海外ロック・ポップス"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 39,
+		"fields": {
+			"large_category": 4,
+			"category_id": 2,
+			"name": "クラシック・オペラ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 40,
+		"fields": {
+			"large_category": 4,
+			"category_id": 3,
+			"name": "ジャズ・フュージョン"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 41,
+		"fields": {
+			"large_category": 4,
+			"category_id": 4,
+			"name": "歌謡曲・演歌"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 42,
+		"fields": {
+			"large_category": 4,
+			"category_id": 5,
+			"name": "ライブ・コンサート"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 43,
+		"fields": {
+			"large_category": 4,
+			"category_id": 6,
+			"name": "ランキング・リクエスト"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 44,
+		"fields": {
+			"large_category": 4,
+			"category_id": 7,
+			"name": "カラオケ・のど自慢"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 45,
+		"fields": {
+			"large_category": 4,
+			"category_id": 8,
+			"name": "民謡・邦楽"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 46,
+		"fields": {
+			"large_category": 4,
+			"category_id": 9,
+			"name": "童謡・キッズ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 47,
+		"fields": {
+			"large_category": 4,
+			"category_id": 10,
+			"name": "民族音楽・ワールドミュージック"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 48,
+		"fields": {
+			"large_category": 4,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 49,
+		"fields": {
+			"large_category": 5,
+			"category_id": 0,
+			"name": "クイズ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 50,
+		"fields": {
+			"large_category": 5,
+			"category_id": 1,
+			"name": "ゲーム"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 51,
+		"fields": {
+			"large_category": 5,
+			"category_id": 2,
+			"name": "トークバラエティ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 52,
+		"fields": {
+			"large_category": 5,
+			"category_id": 3,
+			"name": "お笑い・コメディ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 53,
+		"fields": {
+			"large_category": 5,
+			"category_id": 4,
+			"name": "音楽バラエティ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 54,
+		"fields": {
+			"large_category": 5,
+			"category_id": 5,
+			"name": "旅バラエティ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 55,
+		"fields": {
+			"large_category": 5,
+			"category_id": 6,
+			"name": "料理バラエティ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 56,
+		"fields": {
+			"large_category": 5,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 57,
+		"fields": {
+			"large_category": 6,
+			"category_id": 0,
+			"name": "洋画"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 58,
+		"fields": {
+			"large_category": 6,
+			"category_id": 1,
+			"name": "邦画"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 59,
+		"fields": {
+			"large_category": 6,
+			"category_id": 2,
+			"name": "アニメ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 60,
+		"fields": {
+			"large_category": 6,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 61,
+		"fields": {
+			"large_category": 7,
+			"category_id": 0,
+			"name": "国内アニメ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 62,
+		"fields": {
+			"large_category": 7,
+			"category_id": 1,
+			"name": "海外アニメ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 63,
+		"fields": {
+			"large_category": 7,
+			"category_id": 2,
+			"name": "特撮"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 64,
+		"fields": {
+			"large_category": 7,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 65,
+		"fields": {
+			"large_category": 8,
+			"category_id": 0,
+			"name": "社会・時事"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 66,
+		"fields": {
+			"large_category": 8,
+			"category_id": 1,
+			"name": "歴史・紀行"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 67,
+		"fields": {
+			"large_category": 8,
+			"category_id": 2,
+			"name": "自然・動物・環境"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 68,
+		"fields": {
+			"large_category": 8,
+			"category_id": 3,
+			"name": "宇宙・科学・医学"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 69,
+		"fields": {
+			"large_category": 8,
+			"category_id": 4,
+			"name": "カルチャー・伝統文化"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 70,
+		"fields": {
+			"large_category": 8,
+			"category_id": 5,
+			"name": "文学・文芸"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 71,
+		"fields": {
+			"large_category": 8,
+			"category_id": 6,
+			"name": "スポーツ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 72,
+		"fields": {
+			"large_category": 8,
+			"category_id": 7,
+			"name": "ドキュメンタリー全般"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 73,
+		"fields": {
+			"large_category": 8,
+			"category_id": 8,
+			"name": "インタビュー・討論"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 74,
+		"fields": {
+			"large_category": 8,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 75,
+		"fields": {
+			"large_category": 9,
+			"category_id": 0,
+			"name": "現代劇・新劇"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 76,
+		"fields": {
+			"large_category": 9,
+			"category_id": 1,
+			"name": "ミュージカル"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 77,
+		"fields": {
+			"large_category": 9,
+			"category_id": 2,
+			"name": "ダンス・バレエ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 78,
+		"fields": {
+			"large_category": 9,
+			"category_id": 3,
+			"name": "落語・演芸"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 79,
+		"fields": {
+			"large_category": 9,
+			"category_id": 4,
+			"name": "歌舞伎・古典"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 80,
+		"fields": {
+			"large_category": 9,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 81,
+		"fields": {
+			"large_category": 10,
+			"category_id": 0,
+			"name": "旅・釣り・アウトドア"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 82,
+		"fields": {
+			"large_category": 10,
+			"category_id": 1,
+			"name": "園芸・ペット・手芸"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 83,
+		"fields": {
+			"large_category": 10,
+			"category_id": 2,
+			"name": "音楽・美術・工芸"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 84,
+		"fields": {
+			"large_category": 10,
+			"category_id": 3,
+			"name": "囲碁・将棋"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 85,
+		"fields": {
+			"large_category": 10,
+			"category_id": 4,
+			"name": "麻雀・パチンコ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 86,
+		"fields": {
+			"large_category": 10,
+			"category_id": 5,
+			"name": "車・オートバイ"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 87,
+		"fields": {
+			"large_category": 10,
+			"category_id": 6,
+			"name": "コンピュータ・ＴＶゲーム"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 88,
+		"fields": {
+			"large_category": 10,
+			"category_id": 7,
+			"name": "会話・語学"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 89,
+		"fields": {
+			"large_category": 10,
+			"category_id": 8,
+			"name": "幼児・小学生"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 90,
+		"fields": {
+			"large_category": 10,
+			"category_id": 9,
+			"name": "中学生・高校生"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 91,
+		"fields": {
+			"large_category": 10,
+			"category_id": 10,
+			"name": "大学生・受験"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 92,
+		"fields": {
+			"large_category": 10,
+			"category_id": 11,
+			"name": "生涯教育・資格"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 93,
+		"fields": {
+			"large_category": 10,
+			"category_id": 12,
+			"name": "教育問題"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 94,
+		"fields": {
+			"large_category": 10,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 95,
+		"fields": {
+			"large_category": 11,
+			"category_id": 0,
+			"name": "高齢者"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 96,
+		"fields": {
+			"large_category": 11,
+			"category_id": 1,
+			"name": "障害者"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 97,
+		"fields": {
+			"large_category": 11,
+			"category_id": 2,
+			"name": "社会福祉"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 98,
+		"fields": {
+			"large_category": 11,
+			"category_id": 3,
+			"name": "ボランティア"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 99,
+		"fields": {
+			"large_category": 11,
+			"category_id": 4,
+			"name": "手話"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 100,
+		"fields": {
+			"large_category": 11,
+			"category_id": 5,
+			"name": "文字（字幕）"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 101,
+		"fields": {
+			"large_category": 11,
+			"category_id": 6,
+			"name": "音声解説"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 102,
+		"fields": {
+			"large_category": 11,
+			"category_id": 15,
+			"name": "その他"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 103,
+		"fields": {
+			"large_category": 14,
+			"category_id": 0,
+			"name": "BS/地上デジタル放送用番組付属情報"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 104,
+		"fields": {
+			"large_category": 14,
+			"category_id": 1,
+			"name": "広帯域 CS デジタル放送用拡張"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 105,
+		"fields": {
+			"large_category": 14,
+			"category_id": 3,
+			"name": "サーバー型番組付属情報"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 106,
+		"fields": {
+			"large_category": 14,
+			"category_id": 4,
+			"name": "IP 放送用番組付属情報"
+		}
+	}
+]

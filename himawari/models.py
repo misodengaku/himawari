@@ -61,7 +61,7 @@ class CategoryModel(models.Model):
         (0xF, 'その他'),
     )
     category_id = models.IntegerField(
-        "カテゴリ", choices=LARGE_CATEGORY_CHOICES, unique=True)
+        "カテゴリ", choices=LARGE_CATEGORY_CHOICES, unique=True, primary_key=True)
     name = models.CharField("カテゴリ名", max_length=64)
 
     def get_large_category(self):
@@ -213,15 +213,17 @@ class SubCategoryModel(models.Model):
     }
 
     large_category = models.ForeignKey(CategoryModel, verbose_name="親カテゴリ")
-    category_id = models.IntegerField("サブカテゴリ")
+    category_id = models.IntegerField("サブカテゴリID")
+    name = models.CharField("サブカテゴリ名", max_length=64)
 
-    def get_middle_category(self):
+    def get_fullname(self):
+        return self.__str__()
+
+    def get_name(self):
         return self.MIDDLE_CATEGORY_TABLE[self.large_category.category_id][self.category_id]
 
     def __str__(self):
         return "%s - %s" % (
             self.large_category.get_large_category(),
-            self.get_middle_category())
+            self.get_name())
 
-    def natural_key(self):
-        return (self.large_category, self.middle_category)

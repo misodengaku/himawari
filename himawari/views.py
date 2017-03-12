@@ -8,8 +8,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
 
-from himawari.models import BroadcastStationModel, ProgramModel, CategoryModel
-from himawari.serializers import BroadcastStationSerializer, ProgramSerializer
+from himawari.models import BroadcastStationModel, ProgramModel, SubCategoryModel
+from himawari.serializers import BroadcastStationSerializer, ProgramSerializer, SubCategorySerializer
 
 router = routers.SimpleRouter()
 
@@ -43,5 +43,25 @@ class ProgramViewSet(mixins.CreateModelMixin,
     def get_queryset(self):
         return self.queryset
 
+
+class SubCategoryViewSet(mixins.ListModelMixin,
+                         mixins.RetrieveModelMixin,
+                         viewsets.GenericViewSet):
+
+    lookup_field = "id"
+    serializer_class = SubCategorySerializer
+    queryset = SubCategoryModel.objects.all()
+
+    def get_queryset(self):
+        name = self.request.query_params.get('name', None)
+
+        if name is not None:
+            sname = name.split(' - ')
+            self.queryset = self.queryset.filter(
+                large_category__name=sname[0], name=sname[1])
+
+        return self.queryset
+
 router.register('broadcaststations', BroadcastStationViewSet)
 router.register('programs', ProgramViewSet)
+router.register('categories', SubCategoryViewSet)
