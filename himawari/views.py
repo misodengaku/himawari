@@ -1,5 +1,6 @@
 
 from django.conf import settings
+from django.db.models import Q
 
 from rest_framework import routers, exceptions, mixins, viewsets, status, filters, permissions
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
@@ -53,14 +54,23 @@ class SubCategoryViewSet(mixins.ListModelMixin,
     queryset = SubCategoryModel.objects.all()
 
     def get_queryset(self):
-        name = self.request.query_params.get('name', None)
+        large_category = self.request.query_params.get('large_category', None)
+        middle_category = self.request.query_params.get(
+            'middle_category', None)
 
-        if name is not None:
-            sname = name.split(' - ')
-            self.queryset = self.queryset.filter(
-                large_category__name=sname[0], name=sname[1])
+        l_query = Q()
+        m_query = Q()
+
+        if large_category is not None:
+            l_query = Q(large_category__name=large_category)
+
+        if middle_category is not None:
+            m_query = Q(name=middle_category)
+
+        self.queryset = self.queryset.filter(l_query, m_query)
 
         return self.queryset
+
 
 router.register('broadcaststations', BroadcastStationViewSet)
 router.register('programs', ProgramViewSet)

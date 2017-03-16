@@ -194,7 +194,7 @@
 		"fields": {
 			"large_category": 1,
 			"category_id": 9,
-			"name": "マリン・ウィンタースポーツ"
+			"name": "マリン・ウインタースポーツ"
 		}
 	},
 	{
@@ -960,6 +960,15 @@
 			"large_category": 14,
 			"category_id": 4,
 			"name": "IP 放送用番組付属情報"
+		}
+	},
+	{
+		"model": "himawari.SubCategoryModel",
+		"pk": 107,
+		"fields": {
+			"large_category": 15,
+			"category_id": 15,
+			"name": "その他"
 		}
 	}
 ]

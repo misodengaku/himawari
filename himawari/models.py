@@ -20,13 +20,22 @@ class BroadcastStationModel(models.Model):
         return self.station_id
 
 
+class ChannelModel(models.Model):
+
+    class Meta:
+        verbose_name = verbose_name_plural = "チャンネル"
+
+    logical_channels = models.ManyToManyField('BroadcastStationModel', verbose_name='論理チャンネル')
+    physical_channel = models.IntegerField('物理チャンネル')
+
+
 class ProgramModel(models.Model):
 
     class Meta:
         verbose_name = verbose_name_plural = "番組"
 
-    event_id = models.IntegerField("イベントID")
-    station = models.ForeignKey('BroadcastStationModel')
+    event_id = models.IntegerField("イベントID", unique=True)
+    station = models.ForeignKey('BroadcastStationModel', verbose_name='論理チャンネル')
     title = models.TextField("番組名")
     detail = models.TextField("番組内容")
     start_time = models.DateTimeField("開始時刻")
@@ -64,11 +73,11 @@ class CategoryModel(models.Model):
         "カテゴリ", choices=LARGE_CATEGORY_CHOICES, unique=True, primary_key=True)
     name = models.CharField("カテゴリ名", max_length=64)
 
-    def get_large_category(self):
+    def get_name(self):
         return self.LARGE_CATEGORY_CHOICES[self.category_id][1]
 
     def __str__(self):
-        return self.get_large_category()
+        return self.get_name()
 
 
 class SubCategoryModel(models.Model):
@@ -209,6 +218,9 @@ class SubCategoryModel(models.Model):
             0x1: '広帯域 CS デジタル放送用拡張',
             0x3: 'サーバー型番組付属情報',
             0x4: 'IP 放送用番組付属情報',
+        },
+        15: {
+            0xF: 'その他',
         }
     }
 
@@ -224,6 +236,5 @@ class SubCategoryModel(models.Model):
 
     def __str__(self):
         return "%s - %s" % (
-            self.large_category.get_large_category(),
+            self.large_category.get_name(),
             self.get_name())
-
