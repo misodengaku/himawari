@@ -26,7 +26,7 @@ class SubCategorySerializer(serializers.Serializer):
 
     class Meta:
         model = SubCategoryModel
-        fields = '__all__' #('id', 'name')
+        fields = '__all__'  # ('id', 'name')
 
     id = serializers.IntegerField()
     # name = serializers.SerializerMethodField()
@@ -63,15 +63,33 @@ class ProgramSerializer(serializers.ModelSerializer):
     station = serializers.PrimaryKeyRelatedField(
         queryset=BroadcastStationModel.objects.all())
     title = serializers.CharField()
-    detail = serializers.CharField()
+    detail = serializers.CharField(allow_blank=True)
     start_time = serializers.DateTimeField()
     end_time = serializers.DateTimeField()
     categories = SubCategorySerializer(many=True, read_only=False)
 
     def create(self, validated_data):
+        event_id = validated_data.get('event_id')
+        station = validated_data.get('station')
+        program = ProgramModel.objects.filter(event_id=event_id, station=station)
         categories_data = validated_data.pop('categories')
-        program = ProgramModel.objects.create(**validated_data)
+        category_filters = list(
+            map(lambda c: models.Q(id=c['id']), categories_data))
+        if len(category_filters) > 1:
+            f = reduce(lambda a, b: a | b, category_filters)
+            program.categories = SubCategoryModel.objects.filter(f)
+        elif len(category_filters) == 1:
+            print(category_filters)
+            program.categories = SubCategoryModel.objects.filter(
+                category_filters[0])
 
-        f = reduce(lambda a, b: a | b, map(lambda c: models.Q(id=c['id']), categories_data))
-        program.categories = SubCategoryModel.objects.filter(f)
+
+        program = ProgramModel.objects.create(**validated_data)
+        # if len(program) == 0:
+        #     print("create")
+        # else:
+        #     print("save")
+        #     program['start_time'] = validated_data.get('start_time')
+        #     program['end_time'] = validated_data.get('end_time')
+        #     program.save()
         return program

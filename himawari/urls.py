@@ -16,9 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from himawari import views
+from himawari.api import views
 
 urlpatterns = [
-    url(r'^v1/', include(views.router.urls)),
+    url(r'^api/', include(views.router.urls)),
     url(r'^admin/', admin.site.urls),
 ]

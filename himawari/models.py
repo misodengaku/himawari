@@ -33,11 +33,12 @@ class ProgramModel(models.Model):
 
     class Meta:
         verbose_name = verbose_name_plural = "番組"
+        unique_together = (("event_id", "station", "title"))
 
-    event_id = models.IntegerField("イベントID", unique=True)
+    event_id = models.IntegerField("イベントID")
     station = models.ForeignKey('BroadcastStationModel', verbose_name='論理チャンネル')
     title = models.TextField("番組名")
-    detail = models.TextField("番組内容")
+    detail = models.TextField("番組内容", blank=True, null=True)
     start_time = models.DateTimeField("開始時刻")
     end_time = models.DateTimeField("終了時刻")
     categories = models.ManyToManyField('SubCategoryModel')
