@@ -1,6 +1,7 @@
 # coding=utf-8
 from django.contrib import admin
-from himawari.models import BroadcastStationModel, ChannelModel, ProgramModel, CategoryModel, SubCategoryModel
+from himawari.models import BroadcastStationModel, ChannelModel, ProgramModel, CategoryModel, SubCategoryModel, ScheduleModel
+
 
 class BroadcastStationAdmin(admin.ModelAdmin):
     list_display = ("name", "station_id")
@@ -23,8 +24,13 @@ class SubCategoryAdmin(admin.ModelAdmin):
     # list_display = ("large_category", "middle_category")
     list_filter = ("large_category__category_id", "category_id")
 
+class ScheduleAdmin(admin.ModelAdmin):
+    # list_display = ("large_category", "middle_category")
+    list_filter = ("program", "agent")
+
 admin.site.register(BroadcastStationModel, BroadcastStationAdmin)
 admin.site.register(ChannelModel, ChannelAdmin)
 admin.site.register(ProgramModel, ProgramAdmin)
 admin.site.register(CategoryModel, CategoryAdmin)
 admin.site.register(SubCategoryModel, SubCategoryAdmin)
+admin.site.register(ScheduleModel, ScheduleAdmin)

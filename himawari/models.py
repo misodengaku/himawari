@@ -1,7 +1,6 @@
 # coding=utf-8
 from django.db import models
 
-
 class BroadcastStationModel(models.Model):
 
     class Meta:
@@ -239,3 +238,12 @@ class SubCategoryModel(models.Model):
         return "%s - %s" % (
             self.large_category.get_name(),
             self.get_name())
+
+
+class ScheduleModel(models.Model):
+
+    class Meta:
+        verbose_name = verbose_name_plural = "録画予約"
+
+    program = models.ForeignKey(ProgramModel, verbose_name="番組")
+    agent = models.CharField("録画を実行するエージェント", max_length=64)
